@@ -1,6 +1,11 @@
-# Quasar App (orrui)
+### See how this project has been [set up](setup).
 
-A Quasar Framework app
+### Status:  A very basic prototype to motivate some discussion. Available at http://cor.esipfed.org/orrui/ 
+
+ 
+----
+
+# orrui
 
 ## Install the dependencies
 ```bash
@@ -15,7 +20,7 @@ quasar dev
 
 ### Build the app for production
 ```bash
-quasar build
+quasar build --modern
 ```
 
 ### Customize the configuration
