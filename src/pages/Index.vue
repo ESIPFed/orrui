@@ -49,13 +49,27 @@
         </q-tr>
       </template>
 
+      <template v-slot:item="props">
+        <q-card class="q-ma-sm">
+          <ontology-simple
+            :ontology="props.row"
+          />
+        </q-card>
+      </template>
+
     </q-table>
   </q-page>
 </template>
 
 <script>
+  import OntologySimple from 'components/OntologySimple'
+
   export default {
     name: 'PageIndex',
+
+    components: {
+      OntologySimple,
+    },
 
     data() {
       return {

@@ -33,3 +33,11 @@ Add ontology links in main list:
 and add page to display an ontology:
 
 > ![](ontpage.png)
+
+----
+
+Add OntologySimple component to show basic information about a given ontology.
+Used in the ontology page itself and also in the main page for narrow screens
+(displayed in a responsive manner):
+
+> ![](ontlistgrid.png)
