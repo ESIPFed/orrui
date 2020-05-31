@@ -16,10 +16,20 @@ $ quasar dev
 A second commit with configuring axios to access the COR ORR API, getting the list of ontologies,
 and displaying that list in the main index page, initially just displaying the JSON directly:
 
-![](ontlistjson.png)
+> ![](ontlistjson.png)
 
 ----
 
 Using a q-table to show the ontology list:
 
 ![](ontlisttable.png)
+
+----
+
+Add ontology links in main list:
+
+> ![](ontlistlinks.png)
+
+and add page to display an ontology:
+
+> ![](ontpage.png)

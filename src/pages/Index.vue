@@ -11,7 +11,45 @@
       :grid="$q.screen.lt.md"
       flat
       bordered
-    />
+    >
+      <template v-slot:body="props">
+        <q-tr :props="props">
+          <q-td key="uri" :props="props">
+            <router-link
+              style="text-decoration:none"
+              :to="`/ont/${props.row.uri}`"
+            >
+              {{ props.row.uri }}
+            </router-link>
+          </q-td>
+
+          <q-td key="name" :props="props">
+            {{ props.row.name }}
+          </q-td>
+
+          <q-td key="ownerName" :props="props">
+            {{ props.row.ownerName }}
+          </q-td>
+
+          <q-td key="author" :props="props">
+            {{ props.row.author }}
+          </q-td>
+
+          <q-td key="status" :props="props">
+            {{ props.row.status }}
+          </q-td>
+
+          <q-td key="visibility" :props="props">
+            {{ props.row.visibility }}
+          </q-td>
+
+          <q-td key="version" :props="props">
+            {{ props.row.version }}
+          </q-td>
+        </q-tr>
+      </template>
+
+    </q-table>
   </q-page>
 </template>
 

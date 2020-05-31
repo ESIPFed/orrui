@@ -12,10 +12,16 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          <router-link
+            to="/"
+            style="color:white;text-decoration:none"
+            color="white"
+          >
+            orrui
+          </router-link>
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <div>v0</div>
       </q-toolbar>
     </q-header>
 
