@@ -1,6 +1,6 @@
 ### See how this project has been [set up](setup).
 
-### Status:  A very basic prototype to motivate some discussion. Available at http://cor.esipfed.org/orrui/ 
+### Status:  A very basic prototype to motivate some discussion. Available at http://cor-test.esipfed.org/orrui/ 
 
  
 ----
