@@ -21,7 +21,13 @@
           </router-link>
         </q-toolbar-title>
 
-        <div>v0</div>
+        <a href="https://github.com/ESIPFed/orrui"
+           style="text-decoration:none"
+           class="text-white row items-center q-gutter-x-md"
+        >
+          <div>{{ version }}</div>
+          <q-icon name="fab fa-github" />
+        </a>
       </q-toolbar>
     </q-header>
 
@@ -64,6 +70,8 @@ export default {
 
   data () {
     return {
+      version: 'v0',
+
       leftDrawerOpen: false,
       essentialLinks: [
         {
