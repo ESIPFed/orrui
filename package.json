@@ -11,12 +11,15 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
-    "@quasar/extras": "^1.0.0",
+    "@quasar/extras": "^1.8.2",
     "axios": "^0.18.1",
-    "quasar": "^1.0.0"
+    "quasar": "^1.12.12"
   },
   "devDependencies": {
-    "@quasar/app": "^1.0.0"
+    "@quasar/app": "^1.9.6"
+  },
+  "resolutions": {
+    "lodash": "4.17.19"
   },
   "engines": {
     "node": ">= 10.18.1",
