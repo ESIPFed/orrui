@@ -25,5 +25,11 @@ quasar dev
 quasar build --modern
 ```
 
+> Installation on the COR machine:
+>
+>      cp -r dist/spa/* /var/www/html/cor-test/orrui/
+>
+> Verify by opening http://cor-test.esipfed.org/orrui/
+
 ### Customize the configuration
 See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
