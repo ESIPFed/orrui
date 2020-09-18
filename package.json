@@ -11,9 +11,9 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
-    "@quasar/extras": "^1.8.2",
+    "@quasar/extras": "^1.9.5",
     "axios": "^0.18.1",
-    "quasar": "^1.12.12"
+    "quasar": "^1.14.0"
   },
   "devDependencies": {
     "@quasar/app": "^1.9.6"
