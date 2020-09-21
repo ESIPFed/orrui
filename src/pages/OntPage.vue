@@ -17,7 +17,10 @@
         <tr v-for="(values, prop) in ontology.metadata" :key="prop">
           <td style="vertical-align:top">{{ prop }}</td>
           <td style="vertical-align:top">
-            <ul>
+            <div v-if="values.length === 1">
+              {{ values[0] }}
+            </div>
+            <ul v-else>
               <li v-for="(value, index) in values" :key="index">
                 {{ value }}
               </li>

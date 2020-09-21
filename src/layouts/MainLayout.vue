@@ -23,10 +23,10 @@
 
         <a href="https://github.com/ESIPFed/orrui"
            style="text-decoration:none"
-           class="text-white row items-center q-gutter-x-md"
+           class="text-white row items-center q-gutter-x-md q-mr-md"
         >
-          <div>{{ version }}</div>
-          <q-icon name="fab fa-github" />
+          <div>v{{ version }}</div>
+          <q-icon name="fab fa-github" size="20px"/>
         </a>
       </q-toolbar>
     </q-header>
@@ -42,10 +42,29 @@
           header
           class="text-grey-8"
         >
-          Essential Links
+          COR Links
         </q-item-label>
         <EssentialLink
-          v-for="link in essentialLinks"
+          v-for="link in corLinks"
+          :key="link.title"
+          v-bind="link"
+        />
+      </q-list>
+
+      <q-separator class="q-mt-lg" />
+
+      <q-list>
+        <q-item-label
+          header
+          class="text-grey-8"
+        >
+          <span class="text-bold">orrui</span>
+          is a prototype based on Vue and Quasar.
+          <br/><br/>
+          Here are some links:
+        </q-item-label>
+        <EssentialLink
+          v-for="link in quasarLinks"
           :key="link.title"
           v-bind="link"
         />
@@ -59,63 +78,60 @@
 </template>
 
 <script>
-import EssentialLink from 'components/EssentialLink'
+import {version} from '../../package.json'
 
 export default {
   name: 'MainLayout',
 
   components: {
-    EssentialLink
+    EssentialLink: () => import('components/EssentialLink')
   },
 
   data () {
     return {
-      version: 'v0',
+      version,
 
       leftDrawerOpen: false,
-      essentialLinks: [
+      corLinks: [
         {
-          title: 'Docs',
+          title: 'Official COR',
+          caption: 'cor.esipfed.org/ont/',
+          img: 'http://cor.esipfed.org/esip_cor_logo.png',
+          link: 'http://cor.esipfed.org/ont/'
+        },
+        {
+          title: 'ESIP SemTech',
+          caption: 'wiki.esipfed.org/Semantic_Technologies',
+          icon: 'people',
+          link: 'https://wiki.esipfed.org/Semantic_Technologies'
+        },
+      ],
+
+      quasarLinks: [
+        {
+          title: 'orrui Github',
+          caption: 'ESIPFed/orrui',
+          icon: 'fab fa-github',
+          link: 'https://github.com/ESIPFed/orrui'
+        },
+        {
+          title: 'Quasar Docs',
           caption: 'quasar.dev',
           icon: 'school',
           link: 'https://quasar.dev'
         },
         {
-          title: 'Github',
-          caption: 'github.com/quasarframework',
-          icon: 'code',
-          link: 'https://github.com/quasarframework'
-        },
-        {
-          title: 'Discord Chat Channel',
+          title: 'Quasar Discord Chat Channel',
           caption: 'chat.quasar.dev',
           icon: 'chat',
           link: 'https://chat.quasar.dev'
         },
         {
-          title: 'Forum',
-          caption: 'forum.quasar.dev',
-          icon: 'record_voice_over',
-          link: 'https://forum.quasar.dev'
+          title: 'Vue Docs',
+          caption: 'vuejs.org/v2/guide',
+          icon: 'school',
+          link: 'https://vuejs.org/v2/guide/'
         },
-        {
-          title: 'Twitter',
-          caption: '@quasarframework',
-          icon: 'rss_feed',
-          link: 'https://twitter.quasar.dev'
-        },
-        {
-          title: 'Facebook',
-          caption: '@QuasarFramework',
-          icon: 'public',
-          link: 'https://facebook.quasar.dev'
-        },
-        {
-          title: 'Quasar Awesome',
-          caption: 'Community Quasar projects',
-          icon: 'favorite',
-          link: 'https://awesome.quasar.dev'
-        }
       ]
     }
   }

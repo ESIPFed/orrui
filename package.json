@@ -1,8 +1,8 @@
 {
   "name": "orrui",
   "version": "0.0.1",
-  "description": "A Quasar Framework app",
-  "productName": "Quasar App",
+  "description": "ORR UI Prototype",
+  "productName": "orrui",
   "cordovaId": "org.cordova.quasar.app",
   "capacitorId": "",
   "author": "carueda@gmail.com",
